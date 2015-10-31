@@ -14,3 +14,14 @@
 .tab-pane > .container:first-child {
   width: 100%;
 }
+span.badge > input[type="checkbox"] {
+  margin-top: 0;
+}
+#tempChart , #speedChart {
+  width: 100%!important;
+  height: auto!important;
+}
+.no-padding {
+  padding-left: 0;
+  padding-right: 0;
+}

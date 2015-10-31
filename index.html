@@ -212,19 +212,54 @@
 			    			</div>		    			
 			    		</div>
 			    		<div class="row">
-			    			<div class="col-xs-12 col-sm-3">
-			    				<div class="panel panel-default">
-
+			    			<div class="col-xs-12 col-sm-5">
+			    				<div class="panel panel-default" style="margin-bottom: 0;">
+			    					<div class="panel-heading">
+			    						Températures
+			    					</div>
+			    					<div class="panel-body">
+			    						<table class="table table-bordered table-stripped" style="margin-bottom: 0;">
+			    							<thead>
+			    								<tr>
+				    								<th>Nom</th>
+				    								<th>Min</th>
+				    								<th>Réel</th>
+				    								<th>Max</th>
+			    								</tr>
+			    							</thead>
+			    							<tbody>
+			    								<tr>
+			    									<td>Température transmission</td>
+			    									<td>25</td>
+			    									<td>90</td>
+			    									<td>110</td>
+			    								</tr>
+			    								<tr>
+			    									<td>Température moteur</td>
+			    									<td>25</td>
+			    									<td>90</td>
+			    									<td>110</td>
+			    								</tr>
+			    								<tr>
+			    									<td>Température CVT</td>
+			    									<td>25</td>
+			    									<td>90</td>
+			    									<td>110</td>
+			    								</tr>
+			    								<tr>
+			    									<td>...</td>
+			    									<td>...</td>
+			    									<td>...</td>
+			    									<td>...</td>
+			    								</tr>
+			    							</tbody>
+			    						</table>
+			    					</div>
 			    				</div>
 			    			</div>
-			    			<div class="col-xs-12 col-sm-3">
+			    			<div class="col-xs-12 col-sm-4">
 			    				<div class="panel panel-default">
-			    					
-			    				</div>			    				
-			    			</div>
-			    			<div class="col-xs-12 col-sm-3">
-			    				<div class="panel panel-default">
-			    					
+
 			    				</div>			    				
 			    			</div>
 			    			<div class="col-xs-12 col-sm-3">
@@ -306,7 +341,41 @@
 			    						Informations reçues<br>Baud : 9600
 			    					</div>
 			    					<div class="panel-body">
-			    						
+			    						<ul class="no-padding">
+			    							<li class="list-group-item">
+			    								<span class="badge"><input type="checkbox" checked="checked"></span>
+			    								Température transmission
+			    							</li>
+			    							<li class="list-group-item">
+			    								<span class="badge"><input type="checkbox" checked="checked"></span>
+			    								Température moteur
+			    							</li>
+			    							<li class="list-group-item">
+			    								<span class="badge"><input type="checkbox" checked="checked"></span>
+			    								Température CVT
+			    							</li>			    							
+			    							<li class="list-group-item">
+			    								<span class="badge"><input type="checkbox"></span>
+			    								Position véhicule
+			    							</li>
+			    							<li class="list-group-item">
+			    								<span class="badge"><input type="checkbox"></span>
+			    								Position volant
+			    							</li>
+			    							<li class="list-group-item">
+			    								<span class="badge"><input type="checkbox" checked="checked"></span>
+			    								Accélération / Freinage
+			    							</li>
+			    							<li class="list-group-item">
+			    								<span class="badge"><input type="checkbox"></span>
+			    								Pression freins
+			    							</li>
+			    							<li class="list-group-item">
+			    								<span class="badge"><input type="checkbox" checked="checked"></span>
+			    								...
+			    							</li>
+			    						</ul>
+			    						<button class="btn btn-default" style="float: right">Mettre à jour</button>
 			    					</div>
 			    				</div>
 			    			</div>			    			
