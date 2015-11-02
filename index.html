@@ -80,7 +80,7 @@
 				datasetStroke : true,
 				datasetStrokeWidth : 2,
 				datasetFill : true,
-				legendTemplate : "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<datasets.length; i++){%><li><span style=\"background-color:<%=datasets[i].strokeColor%>\"></span><%if(datasets[i].label){%><%=datasets[i].label%><%}%></li><%}%></ul>"
+				legendTemplate : "<ul style=\"list-style-type: none;\" class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<datasets.length; i++){%><li><span style=\"-moz-border-radius:7px 7px 7px 7px; border-radius:7px 7px 7px 7px; margin-right:10px;width:15px;height:15px;display:inline-block;background-color:<%=datasets[i].strokeColor%>\"></span><%if(datasets[i].label){%><%=datasets[i].label%><%}%></li><%}%></ul>"
 			};
 			
 			$(function() {
@@ -88,10 +88,12 @@
 				
 					if ($(e.target).attr('href') === "#vehicule") {
 						var tempChart = document.getElementById("tempChart").getContext("2d");
-						new Chart(tempChart).Line(graphTemperature, graphOptions);
+						var tempChartObject = new Chart(tempChart).Line(graphTemperature, graphOptions);
+						document.getElementById("tempLegend").innerHTML = tempChartObject.generateLegend();
 						
 						var speedChart = document.getElementById("speedChart").getContext("2d");
-						new Chart(speedChart).Line(graphSpeed, graphOptions);
+						var speedChartObject = new Chart(speedChart).Line(graphSpeed, graphOptions);
+						document.getElementById("speedLegend").innerHTML = speedChartObject.generateLegend();
 					}
 				});
 			});
@@ -316,6 +318,7 @@
 			    					</div>
 			    					<div class="panel-body">
 			    						<canvas id="tempChart" width="400" height="400"></canvas>
+										<div id="tempLegend"></div>
 			    					</div>
 			    				</div>
 			    			</div>		
@@ -326,6 +329,7 @@
 			    					</div>
 			    					<div class="panel-body">
 			    						<canvas id="speedChart" width="400" height="400"></canvas>
+										<div id="speedLegend"></div>
 			    					</div>
 			    				</div>
 			    			</div>		    			
